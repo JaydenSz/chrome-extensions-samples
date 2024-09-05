@@ -1,10 +1,21 @@
 {
-  "name": "Hello Extensions",
-  "description": "Base Level Extension",
-  "version": "1.0",
   "manifest_version": 3,
+  "name": "Screenshot and Upload to ChatGPT",
+  "version": "1.0",
+  "description": "Capture a screenshot and upload to ChatGPT.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
-  }
+    "default_popup": "popup.html"
+  },
+  "host_permissions": [
+    "*://*/*"
+  ]
 }
